@@ -1,0 +1,36 @@
+.contacts__information {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 20px;
+
+  background-color: $basic-white;
+}
+
+.contacts__map-iframe {
+  display: block;
+  width: 100%;
+
+  border: none;
+}
+
+.contacts__text {
+  max-width: 165px;
+
+  font-size: 16px;
+  line-height: 22px;
+  font-family: $font-stack;
+  color: $basic-black;
+  text-transform: uppercase;
+}
+
+.contacts__address {
+  margin-left: 15px;
+
+  font-style: normal;
+  line-height: 20px;
+
+  p {
+    margin: 0;
+  }
+}

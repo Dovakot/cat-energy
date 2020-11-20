@@ -1,0 +1,38 @@
+.sales-pitch {
+  position: relative;
+
+  min-height: 500px;
+  padding-bottom: 100px;
+
+  font-family: $font-stack;
+  text-align: center;
+  color: $basic-white;
+}
+
+.sales-pitch__container {
+  min-height: 300px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  background-color: $basic-green;
+}
+
+.sales-pitch__title {
+  margin-bottom: 25px;
+
+  line-height: 36px;
+  color: inherit;
+}
+
+.sales-pitch__text {
+  margin: 0;
+
+  text-transform: uppercase;
+}
+
+.sales-pitch__button {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  left: 20px;
+}

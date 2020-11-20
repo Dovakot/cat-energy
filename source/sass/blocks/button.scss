@@ -1,0 +1,25 @@
+.button {
+  height: 40px;
+  margin: 0;
+  padding: 0 25px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 40px;
+  font-family: $font-stack;
+  text-align: center;
+  color: $basic-white;
+  text-transform: uppercase;
+
+  background-color: $basic-green;
+  border: none;
+
+  &:hover {
+    background-color: $special-green;
+    cursor: pointer;
+  }
+
+  &:active {
+    color: rgba($basic-white, 0.3);
+  }
+}

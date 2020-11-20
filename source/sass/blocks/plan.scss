@@ -1,0 +1,60 @@
+.plan {
+  margin-bottom: 27px;
+}
+
+.plan__list {
+  @include list-unstyled;
+}
+
+.plan__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 265px;
+  padding: 20px;
+
+  background-color: $basic-extra-light-gray;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.plan__wrapper {
+  padding-bottom: 20px;
+}
+
+.plan__title {
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 37px;
+  font-family: $font-stack;
+  color: $basic-black;
+  text-transform: uppercase;
+}
+
+.plan__text {
+  margin: 0;
+}
+
+.plan__button-wrapper {
+  padding-top: 20px;
+
+  border-top: 1px solid $basic-light-gray;
+}
+
+.plan__button {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  font-family: $font-stack;
+  color: $basic-black;
+  text-transform: uppercase;
+
+  &:active {
+    opacity: 0.3;
+  }
+}

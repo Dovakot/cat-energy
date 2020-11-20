@@ -1,0 +1,36 @@
+.features {
+  margin-bottom: 40px;
+}
+
+.features__list {
+  @include list-unstyled;
+}
+
+.features__item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &::before {
+    content: "";
+
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+
+    background-color: $basic-green;
+  }
+}
+
+.features__number {
+  display: none;
+}
+
+.features__text {
+  margin: 0;
+}
