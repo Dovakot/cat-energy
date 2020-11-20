@@ -1,0 +1,24 @@
+.social {
+  @include list-unstyled;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.social__item {
+  margin: 10px 15px;
+}
+
+.social__link {
+  display: block;
+  width: 25px;
+  height: 25px;
+
+  background-color: $basic-gray;
+
+  &:active {
+    opacity: 0.3;
+  }
+}

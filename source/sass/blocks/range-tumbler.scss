@@ -1,0 +1,56 @@
+.range-tumbler {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.range-tumbler__button {
+  margin: 0 20px;
+  padding: 0;
+
+  font-size: 16px;
+  line-height: 26px;
+  font-family: $font-stack;
+  color: $basic-black;
+  text-transform: uppercase;
+
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px dotted transparent;
+
+  &:hover {
+    border-bottom-style: solid;
+    border-bottom-color: rgba($basic-black, 0.4);
+    cursor: pointer;
+  }
+
+  &:active {
+    border-bottom-color: transparent;
+  }
+}
+
+.range-tumbler__scale {
+  width: 84px;
+  height: 14px;
+  padding: 3px 6px;
+
+  background-color: $basic-white;
+  border: 1px solid $basic-gray;
+  border-radius: 6px;
+}
+
+.range-tumbler__bar {
+  width: 50%;
+  height: 100%;
+
+  background-color: $basic-green;
+  border-radius: 6px;
+
+  &--after {
+    margin-left: auto;
+  }
+}
+
+.range-tumbler__toggle {
+  display: none;
+}

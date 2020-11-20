@@ -1,0 +1,42 @@
+.nav {
+  background-color: $basic-white;
+}
+
+.nav__toggle {
+  position: absolute;
+  top: 23px;
+  right: 20px;
+
+  width: 18px;
+  height: 18px;
+}
+
+.nav__list {
+  @include list-unstyled;
+}
+
+.nav__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 66px;
+  padding: 10px 20px;
+
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  font-family: $font-stack;
+  color: $basic-black;
+  text-transform: uppercase;
+
+  border-top: 1px solid $special-light-gray;
+
+  &[href]:hover {
+    color: rgba($basic-black, 0.6);
+  }
+
+  &[href]:active {
+    color: rgba($basic-black, 0.3);
+  }
+}
