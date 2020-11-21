@@ -1,0 +1,42 @@
+.order__text {
+  margin-bottom: 40px;
+
+  font-family: $font-stack;
+  color: $basic-black;
+  text-transform: uppercase;
+}
+
+.order__form {
+  padding-bottom: 30px;
+}
+
+.order__group {
+  margin-right: 0;
+  margin-left: 0;
+  padding: 0;
+
+  border: none;
+
+  &:not(:last-child) {
+    margin-bottom: 27px;
+  }
+
+  &--radio {
+    padding: 20px 0;
+
+    border-top: 1px solid $basic-light-gray;
+    border-bottom: 1px solid $basic-light-gray;
+  }
+}
+
+.order__list {
+  @include list-unstyled;
+}
+
+.order__item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.order__required {
+  color: $basic-black;
+}

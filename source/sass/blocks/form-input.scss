@@ -1,0 +1,22 @@
+.form-input__label {
+  font-size: 16px;
+  font-family: $font-stack;
+  color: $basic-dark-gray;
+  text-transform: uppercase;
+}
+
+.form-input__field {
+  font-size: 16px;
+  line-height: 45px;
+  font-family: $font-stack;
+  color: $basic-dark-gray;
+  text-transform: uppercase;
+
+  &--comment {
+    line-height: 20px;
+  }
+
+  &::placeholder {
+    opacity: 1;
+  }
+}
