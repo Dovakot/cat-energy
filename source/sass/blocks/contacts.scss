@@ -4,7 +4,9 @@
   align-items: center;
   padding: 30px 20px;
 
-  background-color: $basic-white;
+  &--special {
+    background-color: $basic-white;
+  }
 }
 
 .contacts__map-iframe {

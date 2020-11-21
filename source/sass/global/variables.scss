@@ -1,7 +1,7 @@
 // Шрифты
 $special-font: ("Oswald");
-$basic-fonts: ("Arial", "Helvetica", sans-serif);
-$font-stack: join($special-font, $basic-fonts);
+$basic-font: ("Arial", sans-serif);
+$font-stack: join($special-font, $basic-font);
 
 // Цвета
 $basic-black: #000000;
@@ -12,6 +12,7 @@ $basic-light-gray: #d9d9d9;
 $basic-extra-light-gray: #f2f2f2;
 $basic-green: #68b738;
 
+$special-dark-gray: #222222;
 $special-light-gray: #e6e6e6;
 $special-extra-light-gray: #eaeaea;
 $special-green: #5eaa2f;
