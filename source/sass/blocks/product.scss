@@ -1,0 +1,19 @@
+.product {
+  padding: 10px 20px 20px;
+}
+
+.product__link-title {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.product__title {
+  @include text-uppercase;
+
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.product__data {
+  margin-bottom: 20px;
+}

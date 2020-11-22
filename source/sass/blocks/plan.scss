@@ -47,12 +47,7 @@
 }
 
 .plan__button {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 16px;
-  font-family: $font-stack;
-  color: $basic-black;
-  text-transform: uppercase;
+  @include text-uppercase($color: $basic-black);
 
   &:active {
     opacity: 0.3;

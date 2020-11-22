@@ -1,16 +1,9 @@
 .form-input__label {
-  font-size: 16px;
-  font-family: $font-stack;
-  color: $basic-dark-gray;
-  text-transform: uppercase;
+  @include text-uppercase(18px, $basic-dark-gray);
 }
 
 .form-input__field {
-  font-size: 16px;
-  line-height: 45px;
-  font-family: $font-stack;
-  color: $basic-dark-gray;
-  text-transform: uppercase;
+  @include text-uppercase(45px $basic-dark-gray);
 
   &--comment {
     line-height: 20px;

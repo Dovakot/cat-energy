@@ -1,0 +1,29 @@
+.additional-products__title {
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.additional-products__list {
+  @include list-unstyled;
+
+  margin-bottom: 40px;
+}
+
+.additional-products__item {
+  padding-top: 15px;
+  padding-bottom: 20px;
+}
+
+.additional-products__data {
+  margin-bottom: 15px;
+}
+
+.additional-products__name {
+  @include text-uppercase;
+
+  margin-bottom: 15px;
+}
+
+.additional-products__gift {
+  margin-bottom: 35px;
+}

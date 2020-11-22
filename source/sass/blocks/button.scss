@@ -1,4 +1,5 @@
 .button {
+  display: inline-block;
   height: 40px;
   margin: 0;
   padding: 0 25px;
@@ -21,5 +22,19 @@
 
   &:active {
     color: rgba($basic-white, 0.3);
+  }
+
+  &--silver {
+    color: $basic-dark-gray;
+
+    background-color: $basic-extra-light-gray;
+  }
+
+  &--silver:hover {
+    background-color: lighten($special-extra-light-gray, 0.5%);
+  }
+
+  &--silver:active {
+    color: rgba($basic-dark-gray, 0.3);
   }
 }
