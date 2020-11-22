@@ -1,0 +1,20 @@
+.show-all {
+  padding: 20px;
+
+  text-align: center;
+}
+
+.show-all__title {
+  @include text-uppercase;
+
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.show-all__text {
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  font-size: 12px;
+  line-height: 16px;
+}

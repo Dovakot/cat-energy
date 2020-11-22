@@ -1,0 +1,12 @@
+.catalog {
+  margin-bottom: 30px;
+}
+
+.catalog__list {
+  @include list-unstyled;
+}
+
+.catalog__item {
+  margin-right: -20px;
+  margin-left: -20px;
+}

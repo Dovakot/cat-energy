@@ -17,13 +17,9 @@
 }
 
 .contacts__text {
-  max-width: 165px;
+  @include text-uppercase(22px, $basic-black);
 
-  font-size: 16px;
-  line-height: 22px;
-  font-family: $font-stack;
-  color: $basic-black;
-  text-transform: uppercase;
+  max-width: 165px;
 }
 
 .contacts__address {
