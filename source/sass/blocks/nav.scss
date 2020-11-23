@@ -9,6 +9,10 @@
 
   width: 18px;
   height: 18px;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .nav__list {
