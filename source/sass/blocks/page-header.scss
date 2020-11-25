@@ -6,7 +6,6 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: auto 1fr;
-    grid-column-gap: 60px;
     justify-content: space-between;
     align-items: center;
   }
