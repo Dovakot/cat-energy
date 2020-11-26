@@ -2,6 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
 
     <link rel="stylesheet" href="css/style.css">
@@ -32,9 +33,11 @@
       <h1 class="visually-hidden">Кэт энерджи: магазин питания для котов</h1>
       <section class="sales-pitch">
         <div class="container sales-pitch__container">
-          <h2 class="basic-title sales-pitch__title">Функциональное питание для котов</h2>
-          <p class="sales-pitch__text">Занялся собой? Займись котом!</p>
-          <a class="button sales-pitch__button" href="form.html">Подобрать программу</a>
+          <div class="sales-pitch__wrapper">
+            <h2 class="basic-title sales-pitch__title">Функциональное питание для котов</h2>
+            <p class="sales-pitch__text">Занялся собой? Займись котом!</p>
+            <a class="button sales-pitch__button" href="form.html">Подобрать программу</a>
+          </div>
         </div>
       </section>
       <div class="container">
@@ -100,48 +103,52 @@
       <section class="example">
         <div class="container">
           <h2 class="basic-title example__title">Живой пример</h2>
-          <p class="example__text">
-            Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
-            Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек
-            и по-прежнему спит по 16 часов в день.
-          </p>
-          <div class="example__stats stats">
-            <dl class="stats__list">
-              <div class="stats__item">
-                <dt class="stats__number">5 кг</dt>
-                <dd class="stats__description">снижение веса</dd>
-              </div>
-              <div class="stats__item">
-                <dt class="stats__number">60 дней</dt>
-                <dd class="stats__description">затрачено времени</dd>
-              </div>
-            </dl>
-            <span class="stats__price">
-              Затраты на питание: 15 000 руб.
-            </span>
-          </div>
         </div>
-        <div class="example__slider slider">
-          <div class="container">
-            <ul class="slider__list">
-              <li class="slider__item slider__item--before">
-                <img src="https://via.placeholder.com/311x232" width="311" height="232" alt="Как выглядел Борис на обычном корме">
-              </li>
-              <li class="slider__item slider__item--after">
-                <img src="https://via.placeholder.com/311x232" width="311" height="232" alt="Как выглядит Борис на корме Cat Energy Slim">
-              </li>
-            </ul>
-            <div class="slider__range range-tumbler">
-              <button class="range-tumbler__button" type="button">Было</button>
-              <div class="range-tumbler__sliders">
-                <div class="range-tumbler__scale">
-                  <div class="range-tumbler__bar"></div>
+        <div class="example__wrapper">
+          <div class="container example__container">
+            <p class="example__text">
+              Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
+              Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек
+              и по-прежнему спит по 16 часов в день.
+            </p>
+            <div class="example__stats stats">
+              <dl class="stats__list">
+                <div class="stats__item">
+                  <dt class="stats__number">5 кг</dt>
+                  <dd class="stats__description">снижение веса</dd>
                 </div>
-                <div class="range-tumbler__toggle" tabindex="0">
-                  <span class="visually-hidden">Сменить картинку</span>
+                <div class="stats__item">
+                  <dt class="stats__number">60 дней</dt>
+                  <dd class="stats__description">затрачено времени</dd>
                 </div>
+              </dl>
+              <span class="stats__price">
+                Затраты на питание: 15 000 руб.
+              </span>
+            </div>
+          </div>
+          <div class="example__slider slider">
+            <div class="container slider__container">
+              <ul class="slider__list">
+                <li class="slider__item slider__item--before">
+                  <img src="https://via.placeholder.com/311x232" width="311" height="232" alt="Как выглядел Борис на обычном корме">
+                </li>
+                <li class="slider__item slider__item--after">
+                  <img src="https://via.placeholder.com/311x232" width="311" height="232" alt="Как выглядит Борис на корме Cat Energy Slim">
+                </li>
+              </ul>
+              <div class="slider__range range-tumbler">
+                <button class="range-tumbler__button" type="button">Было</button>
+                <div class="range-tumbler__sliders">
+                  <div class="range-tumbler__scale">
+                    <div class="range-tumbler__bar"></div>
+                  </div>
+                  <div class="range-tumbler__toggle" tabindex="0">
+                    <span class="visually-hidden">Сменить картинку</span>
+                  </div>
+                </div>
+                <button class="range-tumbler__button" type="button">Стало</button>
               </div>
-              <button class="range-tumbler__button" type="button">Стало</button>
             </div>
           </div>
         </div>
@@ -150,12 +157,14 @@
     <footer class="page-footer">
       <section class="page-footer__contacts contacts">
         <h2 class="visually-hidden">Контактные данные</h2>
-        <div class="contacts__information">
-          <span class="contacts__text">Приглашаем к&nbsp;сотрудничеству дилеров!</span>
-          <address class="contacts__address">
-            <p>ул. Большая Конюшенная, д. 19/8</p>
-            <p>Санкт-Петербург</p>
-          </address>
+        <div class="contacts__information contacts__information--special">
+          <div class="container contacts__container">
+            <span class="contacts__text">Приглашаем к&nbsp;сотрудничеству дилеров!</span>
+            <address class="contacts__address">
+              <p>ул. Большая Конюшенная, д. 19/8</p>
+              <p>Санкт-Петербург</p>
+            </address>
+          </div>
         </div>
         <div class="contacts__map">
           <iframe class="contacts__map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533248!2d30.320858715846803!3d59.93871648187619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1605374517477!5m2!1sru!2sru" width="320" height="362" aria-hidden="false" tabindex="0" allowfullscreen></iframe>

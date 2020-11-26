@@ -4,6 +4,17 @@
 
 .features__list {
   @include list-unstyled;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 35px 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 80px;
+  }
 }
 
 .features__item {
@@ -13,6 +24,10 @@
 
   &:not(:last-child) {
     margin-bottom: 20px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 0;
+    }
   }
 
   &::before {

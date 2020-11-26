@@ -4,6 +4,12 @@
 
 .plan__list {
   @include list-unstyled;
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 80px;
+  }
 }
 
 .plan__item {
@@ -17,6 +23,10 @@
 
   &:not(:last-child) {
     margin-bottom: 20px;
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 0;
+    }
   }
 }
 
