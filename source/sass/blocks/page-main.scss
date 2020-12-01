@@ -2,4 +2,8 @@
   padding-top: 30px;
 
   border-top: 1px solid $basic-light-gray;
+
+  @media (min-width: $tablet-width) {
+    border-top: none;
+  }
 }

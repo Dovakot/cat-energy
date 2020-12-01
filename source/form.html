@@ -2,6 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
 
     <link rel="stylesheet" href="css/style.css">
@@ -30,74 +31,78 @@
     </header>
     <main class="page-main page-main--special">
       <section class="order">
-        <div class="container">
+        <div class="container order__container">
           <h1 class="basic-title order__title">Подбор программы</h1>
           <p class="order__text">
             Заполните анкету, и мы подберем программу питания для вашего кота
           </p>
         </div>
         <form class="order__form" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="order__group">
-            <legend class="visually-hidden">Данные кота</legend>
-            <div class="container">
-              <ul class="order__list">
-                <li class="order__item">
-                  <label class="form-input">
-                    <span class="form-input__label">
-                      Имя:<sup>*</sup>
-                    </span>
-                    <input class="form-input__field" type="text" name="cat-name" placeholder="Барсик" required>
-                  </label>
-                </li>
-                <li class="order__item">
-                  <label class="form-input">
-                    <span class="form-input__label">
-                      Вес (кг):<sup>*</sup>
-                    </span>
-                    <input class="form-input__field" type="text" name="cat-weight" placeholder="7" required>
-                  </label>
-                </li>
-                <li class="order__item">
-                  <label class="form-input">
-                    <span class="form-input__label">Возраст (лет):</span>
-                    <input class="form-input__field" type="text" name="cat-age" placeholder="7">
-                  </label>
-                </li>
-              </ul>
-            </div>
-          </fieldset>
-          <fieldset class="order__group order__group--radio">
-            <legend class="visually-hidden">Программа питания</legend>
-            <div class="container">
-              <ul class="order__list">
-                <li class="order__item">
-                  <label class="form-control">
-                    <input class="visually-hidden form-control__field" type="radio" name="program-type" value="slim" checked>
-                    <span class="form-control__label">Похудение</span>
-                  </label>
-                </li>
-                <li class="order__item">
-                  <label class="form-control">
-                    <input class="visually-hidden form-control__field" type="radio" name="program-type" value="pro">
-                    <span class="form-control__label">Набор массы</span>
-                  </label>
-                </li>
-                <li class="order__item">
-                  <label class="form-control">
-                    <input class="visually-hidden form-control__field" type="radio" name="program-type" value="advice">
-                    <span class="form-control__label">Не знаю (Нужен ваш совет)</span>
-                  </label>
-                </li>
-              </ul>
-            </div>
-          </fieldset>
+          <div class="order__wrapper">
+            <fieldset class="order__group">
+              <legend class="visually-hidden">Данные кота</legend>
+              <div class="container order__fields">
+                <ul class="order__list list-input">
+                  <li class="list-input__item">
+                    <label class="form-input">
+                      <span class="form-input__label">
+                        Имя:<sup>*</sup>
+                      </span>
+                      <input class="form-input__field" type="text" name="cat-name" placeholder="Барсик" required>
+                    </label>
+                  </li>
+                  <li class="list-input__item">
+                    <label class="form-input">
+                      <span class="form-input__label">
+                        Вес (кг):<sup>*</sup>
+                      </span>
+                      <input class="form-input__field" type="text" name="cat-weight" placeholder="7" required>
+                    </label>
+                  </li>
+                  <li class="list-input__item">
+                    <label class="form-input">
+                      <span class="form-input__label">Возраст (лет):</span>
+                      <input class="form-input__field" type="text" name="cat-age" placeholder="7">
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </fieldset>
+            <fieldset class="order__group order__group--radio">
+              <legend class="visually-hidden">Программа питания</legend>
+              <div class="container order__fields">
+                <ul class="order__list list-radio">
+                  <li class="list-radio__item">
+                    <label class="form-control">
+                      <input class="visually-hidden form-control__field" type="radio" name="program-type" value="slim" checked>
+                      <span class="form-control__label">Похудение</span>
+                    </label>
+                  </li>
+                  <li class="list-radio__item">
+                    <label class="form-control">
+                      <input class="visually-hidden form-control__field" type="radio" name="program-type" value="pro">
+                      <span class="form-control__label">Набор массы</span>
+                    </label>
+                  </li>
+                  <li class="list-radio__item">
+                    <label class="form-control">
+                      <input class="visually-hidden form-control__field" type="radio" name="program-type" value="advice">
+                      <span class="form-control__label">Не знаю (Нужен ваш совет)</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </fieldset>
+          </div>
           <fieldset class="order__group">
             <legend class="order__title special-title">
-              <span class="special-title__wrapper">Контактные данные (владельца кота)</span>
+              <div class="container special-title__container">
+                <span class="special-title__wrapper">Контактные данные (владельца кота)</span>
+              </div>
             </legend>
-            <div class="container">
-              <ul class="order__list">
-                <li class="order__item">
+            <div class="container order__container">
+              <ul class="order__list list-input list-input--owner">
+                <li class="list-input__item">
                   <label class="form-input">
                     <span class="form-input__label">
                       E-mail:<sup>*</sup>
@@ -105,7 +110,7 @@
                     <input class="form-input__field form-input__field--email" type="email" name="user-email" placeholder="kuklachev@gmail.com" required>
                   </label>
                 </li>
-                <li class="order__item">
+                <li class="list-input__item">
                   <label class="form-input">
                     <span class="form-input__label">
                       Телефон:<sup>*</sup>
@@ -118,9 +123,11 @@
           </fieldset>
           <fieldset class="order__group">
             <legend class="order__title special-title">
-              <span class="special-title__wrapper">Комментарий</span>
+              <div class="container special-title__container">
+                <span class="special-title__wrapper">Комментарий</span>
+              </div>
             </legend>
-            <div class="container">
+            <div class="container order__container">
               <label class="form-input">
                 <span class="visually-hidden">Текст комментария:</span>
                 <textarea class="form-input__field form-input__field--comment" name="user-comment" rows="8" placeholder="Расскажите обо всех повадках кота"></textarea>
@@ -129,29 +136,31 @@
           </fieldset>
           <fieldset class="order__group">
             <legend class="order__title special-title">
-              <span class="special-title__wrapper">Дополнительно</span>
+              <div class="container special-title__container">
+                <span class="special-title__wrapper">Дополнительно</span>
+              </div>
             </legend>
-            <div class="container">
-              <ul class="order__list">
-                <li class="order__item">
+            <div class="container order__container">
+              <ul class="order__list list-checkbox">
+                <li class="list-checkbox__item">
                   <label class="form-control">
                     <input class="visually-hidden form-control__field form-control__field--checkbox" type="checkbox" name="extra-sweetene" checked>
                     <span class="form-control__label">Сахарозаменитель</span>
                   </label>
                 </li>
-                <li class="order__item">
+                <li class="list-checkbox__item">
                   <label class="form-control">
                     <input class="visually-hidden form-control__field form-control__field--checkbox" type="checkbox" name="extra-water">
                     <span class="form-control__label">Питьевая вода</span>
                   </label>
                 </li>
-                <li class="order__item">
+                <li class="list-checkbox__item">
                   <label class="form-control">
                     <input class="visually-hidden form-control__field form-control__field--checkbox" type="checkbox" name="extra-milk">
                     <span class="form-control__label">Молоко</span>
                   </label>
                 </li>
-                <li class="order__item">
+                <li class="list-checkbox__item">
                   <label class="form-control">
                     <input class="visually-hidden form-control__field form-control__field--checkbox" type="checkbox" name="extra-vitamins">
                     <span class="form-control__label">Витамины</span>
@@ -160,7 +169,7 @@
               </ul>
             </div>
           </fieldset>
-          <div class="container order__wrapper">
+          <div class="container order__submit">
             <button class="button order__button" type="submit">Отправить заявку</button>
             <span class="order__required">
               <sup>*</sup> — Обязательные поля
@@ -173,11 +182,13 @@
       <section class="page-footer__contacts contacts">
         <h2 class="visually-hidden">Контактные данные</h2>
         <div class="contacts__information">
-          <span class="contacts__text">Приглашаем к&nbsp;сотрудничеству дилеров!</span>
-          <address class="contacts__address">
-            <p>ул. Большая Конюшенная, д. 19/8</p>
-            <p>Санкт-Петербург</p>
-          </address>
+          <div class="container contacts__container">
+            <span class="contacts__text">Приглашаем к&nbsp;сотрудничеству дилеров!</span>
+            <address class="contacts__address">
+              <p>ул. Большая Конюшенная, д. 19/8</p>
+              <p>Санкт-Петербург</p>
+            </address>
+          </div>
         </div>
         <div class="contacts__map">
           <iframe class="contacts__map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533248!2d30.320858715846803!3d59.93871648187619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1605374517477!5m2!1sru!2sru" width="320" height="362" aria-hidden="false" tabindex="0" allowfullscreen></iframe>

@@ -1,0 +1,13 @@
+.list-radio {
+  @include list-unstyled;
+
+  @media (min-width: $tablet-width) {
+    padding: 25px;
+
+    border: 1px solid $basic-light-gray;
+  }
+}
+
+.list-radio__item:not(:last-child) {
+  margin-bottom: 15px;
+}

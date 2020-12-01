@@ -1,0 +1,19 @@
+.list-input {
+  @include list-unstyled;
+
+  &--owner {
+    @media (min-width: $desktop-width) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 80px;
+    }
+  }
+}
+
+.list-input__item:not(:last-child) {
+  margin-bottom: 15px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+}

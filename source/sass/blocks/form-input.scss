@@ -1,9 +1,18 @@
+.form-input {
+  display: flex;
+  align-items: center;
+}
+
 .form-input__label {
   @include text-uppercase(18px, $basic-dark-gray);
+
+  margin-right: 15px;
 }
 
 .form-input__field {
-  @include text-uppercase(45px $basic-dark-gray);
+  @include text-uppercase(45px, $basic-dark-gray);
+
+  flex-grow: 1;
 
   &--comment {
     line-height: 20px;
