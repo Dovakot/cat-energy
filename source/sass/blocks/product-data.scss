@@ -2,3 +2,25 @@
   font-size: 12px;
   line-height: 16px;
 }
+
+.product-data__group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+
+  & > * {
+    @media (min-width: $tablet-width) {
+      padding-top: 5px;
+      padding-bottom: 5px;
+
+      border-bottom: 1px solid $basic-gray;
+    }
+  }
+}
+
+.product-data__value {
+  margin-left: 0;
+  padding-left: 10px;
+
+  text-align: right;
+}

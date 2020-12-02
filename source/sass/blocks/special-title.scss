@@ -31,6 +31,10 @@
       display: none;
     }
   }
+
+  &--basis::after {
+    flex-basis: 53px;
+  }
 }
 
 .special-title__wrapper {

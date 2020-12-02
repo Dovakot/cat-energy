@@ -4,9 +4,35 @@
 
 .catalog__list {
   @include list-unstyled;
+
+  margin-right: -20px;
+  margin-left: -20px;
+
+  color: lighten($special-extra-light-gray, 0.5%);
+
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 60px;
+    margin-right: 0;
+    margin-left: 0;
+
+    border: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column-gap: 80px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
 .catalog__item {
-  margin-right: -20px;
-  margin-left: -20px;
+  color: $basic-dark-gray;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 80px;
+  }
 }
