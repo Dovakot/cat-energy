@@ -1,58 +1,161 @@
 .sales-pitch {
-  position: relative;
-
-  min-height: 500px;
-  padding-bottom: 100px;
+  padding-bottom: 200px;
 
   font-family: $font-stack;
   text-align: center;
   color: $basic-white;
 
   @media (min-width: $tablet-width) {
+    padding-bottom: 0;
+
     text-align: left;
     color: $basic-black;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+
+    margin-bottom: 82px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+
+      width: 50%;
+      height: 694px;
+
+      background-color: $special-dark-green;
+      background-image: url("../img/bg-sales-pitch-lg.jpg");
+      background-repeat: no-repeat;
+      background-position: right bottom, left top;
+      background-size: 720px auto, 100% auto;
+    }
   }
 }
 
 .sales-pitch__container {
-  min-height: 300px;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  position: relative;
 
-  background-color: $basic-green;
+  background-image: url("../img/bg-sales-pitch.jpg"),
+    linear-gradient(to right, $gradient-green-start, $gradient-green-start 50%, $gradient-green-end 50%, $gradient-green-end 100%);
+  background-repeat: no-repeat;
+  background-position: center bottom, left top;
+  background-size: 320px auto, 100% auto;
 
   @media (min-width: $tablet-width) {
-    background-color: $basic-white;
+    background-image: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 588px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: calc(100% - 135px);
+    left: 50%;
+    z-index: 15;
+
+    width: 280px;
+    height: 270px;
+
+    background-image: url("../img/sales-pitch.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    transform: translateX(-50%);
+
+    @media (min-width: $tablet-width) {
+      top: auto;
+      right: 0;
+      bottom: 0;
+      left: auto;
+      z-index: 10;
+
+      width: 627px;
+      height: 610px;
+
+      transform: translateX(0);
+    }
+
+    @media (min-width: $desktop-width) {
+      right: 220px;
+      bottom: 52px;
+
+      width: 509px;
+      height: 500px;
+    }
+  }
+}
+
+.sales-pitch__wrapper {
+  position: relative;
+  z-index: 10;
+
+  padding-top: 26px;
+  padding-bottom: 162px;
+
+  @media (min-width: $tablet-width) {
+    padding: 63px 206px 630px 87px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 540px;
+    padding: 115px 0 100px 80px;
   }
 }
 
 .sales-pitch__title {
-  margin-bottom: 25px;
+  margin-bottom: 24px;
 
   line-height: 36px;
   color: inherit;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 42px;
+
+    line-height: 60px;
+  }
 }
 
 .sales-pitch__text {
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 51px;
+  }
 }
 
 .sales-pitch__button {
   position: absolute;
-  right: 20px;
-  bottom: 20px;
-  left: 20px;
+  top: calc(100% + 138px);
+  right: 0;
+  left: 0;
 
   @media (min-width: $tablet-width) {
-    position: static;
-  }
-}
+    top: auto;
+    right: auto;
+    bottom: 527px;
+    left: 82px;
 
-@media (min-width: $tablet-width) {
-  .sales-pitch__wrapper {
-    max-width: 490px;
-    margin-left: 90px;
+    min-width: 244px;
+    height: 54px;
+
+    font-size: 20px;
+    line-height: 54px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: static;
   }
 }

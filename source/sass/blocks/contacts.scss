@@ -3,11 +3,12 @@
 }
 
 .contacts__information {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 28px;
+  padding-bottom: 26px;
 
-  &--special {
-    background-color: $basic-white;
+  @media (min-width: $tablet-width) {
+    padding-top: 63px;
+    padding-bottom: 58px;
   }
 
   @media (min-width: $desktop-width) {
@@ -16,27 +17,36 @@
     left: calc((100% - 1220px) / 2);
 
     width: 570px;
+    padding-top: 63px;
+    padding-bottom: 58px;
 
     background-color: $basic-white;
-    transform: translateY(-50%);
+    transform: translateY(-52%);
+  }
+
+  &--special {
+    background-color: $basic-white;
   }
 }
 
 .contacts__container {
   display: grid;
-  grid-column-gap: 12px;
-  grid-template-columns: 130px auto;
+  grid-column-gap: 17px;
+  grid-template-columns: min-content auto;
   justify-content: space-between;
   align-items: center;
 
   @media (min-width: $tablet-width) {
-    grid-template-columns: 170px auto;
-    padding-right: 40px;
-    padding-left: 40px;
+    grid-template-columns: min-content 168px;
+
+    padding-right: 42px;
+    padding-left: 41px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 400px;
+    width: 418px;
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 
@@ -45,10 +55,31 @@
   width: 100%;
 
   border: none;
+
+  @media (min-width: $tablet-width) {
+    height: 400px;
+  }
 }
 
 .contacts__text {
-  @include text-uppercase(22px, $basic-black);
+  @include text-uppercase(18px, $basic-black);
+
+  margin-top: 0;
+  margin-bottom: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  span {
+    display: inline-block;
+    margin-bottom: 4px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .contacts__address {
@@ -56,6 +87,19 @@
   line-height: 20px;
 
   p {
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    @media (min-width: $tablet-width) {
+      text-align: right;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      text-align: left;
+    }
   }
 }
