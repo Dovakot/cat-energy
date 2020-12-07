@@ -16,6 +16,14 @@ $special-dark-gray: #222222;
 $special-light-gray: #e6e6e6;
 $special-extra-light-gray: #eaeaea;
 $special-green: #5eaa2f;
+$special-dark-green: #64a73c;
+
+$gradient-green-start: #65a83e;
+$gradient-green-end: #62a53b;
+$gradient-gray: linear-gradient(to right, $basic-extra-light-gray, $basic-extra-light-gray 53.1%, $special-extra-light-gray 53.1%, $special-extra-light-gray 100%);
+
+// SVG Круг
+$icon-circle: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='25' cy='25' r='25' fill='%2368B738'/%3E%3C/svg%3E");
 
 // Вьюпорт
 $tablet-width: 768px;

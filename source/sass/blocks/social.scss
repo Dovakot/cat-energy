@@ -9,16 +9,58 @@
 
 .social__item {
   margin: 10px 15px;
+
+  @media (min-width: $tablet-width) {
+    margin: 10px;
+  }
 }
 
 .social__link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 25px;
   height: 25px;
 
-  background-color: $basic-gray;
+  @media (min-width: $tablet-width) {
+    width: 34px;
+    height: 34px;
+  }
+
+  &:hover svg {
+    fill: $basic-green;
+  }
+
+  &--fb:hover svg {
+    fill: none;
+    stroke: $basic-green;
+  }
 
   &:active {
     opacity: 0.3;
+  }
+}
+
+.social__icon-vk {
+  @media (min-width: $tablet-width) {
+    width: 29px;
+    height: 18px;
+  }
+}
+
+.social__icon-inst {
+  @media (min-width: $tablet-width) {
+    width: 23px;
+    height: 23px;
+  }
+}
+
+.social__icon-fb {
+  margin-right: 5px;
+
+  @media (min-width: $tablet-width) {
+    width: 15px;
+    height: 29px;
+    margin-right: 15px;
   }
 }

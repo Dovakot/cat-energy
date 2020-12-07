@@ -2,17 +2,42 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (min-width: $tablet-width) {
+    min-height: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: flex-end;
+  }
+}
+
+.range-tumbler__sliders {
+  margin: 0 17px;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+
+    margin: 0 22px;
+  }
 }
 
 .range-tumbler__button {
   @include text-uppercase(26px, $basic-black);
 
-  margin: 0 20px;
   padding: 0;
+  margin: 0;
 
   background-color: transparent;
   border: none;
   border-bottom: 1px dotted transparent;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+
+    border-bottom: 1px dotted rgba($basic-black, 0.24);
+  }
 
   &:hover {
     border-bottom-style: solid;
@@ -33,6 +58,14 @@
   background-color: $basic-white;
   border: 1px solid $basic-gray;
   border-radius: 6px;
+
+  @media (min-width: $tablet-width) {
+    width: 428px;
+    height: 6px;
+    padding: 0;
+
+    background-color: $basic-gray;
+  }
 }
 
 .range-tumbler__bar {
@@ -42,11 +75,42 @@
   background-color: $basic-green;
   border-radius: 6px;
 
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
   &--after {
     margin-left: auto;
   }
 }
 
 .range-tumbler__toggle {
+  @include range-tumbler-toggle($basic-gray);
+
   display: none;
+  position: absolute;
+  top: -14px;
+  left: 50%;
+
+  width: 33px;
+  height: 33px;
+
+  color: $basic-gray;
+
+  background-color: $basic-white;
+  border-radius: 100%;
+  transform: translateX(-45%);
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+
+  &:hover {
+    @include range-tumbler-toggle($basic-gray, 0 2px 4px rgba($basic-black, 0.19));
+  }
+
+  &:active {
+    @include range-tumbler-toggle($basic-green);
+  }
 }

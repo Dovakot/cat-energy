@@ -16,3 +16,13 @@
   color: $color;
   text-transform: uppercase;
 }
+
+@mixin range-tumbler-toggle(
+  $color,
+  $shadow: 0 1px 3px rgba($basic-black, 0.16)
+) {
+  box-shadow: 0 0 0 1px $color inset,
+    0 0 0 13px $basic-white inset,
+    0 0 0 20px $basic-green inset,
+    $shadow;
+}

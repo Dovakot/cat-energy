@@ -1,14 +1,24 @@
 .nav {
-  background-color: $basic-white;
+  @media (max-width: $mobile-width) {
+    background-color: $basic-white;
+  }
 }
 
 .nav__toggle {
   position: absolute;
-  top: 23px;
-  right: 20px;
+  top: 21px;
+  right: 22px;
 
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  padding: 0;
+
+  background-color: transparent;
+  background-image: url("../img/icon-close.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border: none;
 
   @media (min-width: $tablet-width) {
     display: none;
@@ -18,10 +28,20 @@
 .nav__list {
   @include list-unstyled;
 
+  border-bottom: 1px solid $special-light-gray;
+
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
+
+    border-bottom: none;
+  }
+}
+
+.nav__item {
+  @media (min-width: $tablet-width) {
+    margin-left: 35px;
   }
 }
 
@@ -42,18 +62,10 @@
 
   border-top: 1px solid $special-light-gray;
 
-  &[href]:hover {
-    color: rgba($basic-black, 0.6);
-  }
-
-  &[href]:active {
-    color: rgba($basic-black, 0.3);
-  }
-
   @media (min-width: $tablet-width) {
     width: auto;
     min-height: 0;
-    padding: 0;
+    padding: 8px 0;
 
     font-weight: 400;
     font-size: 18px;
@@ -61,10 +73,38 @@
 
     border-top: none;
   }
-}
 
-@media (min-width: $tablet-width) {
-  .nav__item {
-    margin: 5px 0 5px 30px;
+  @media (min-width: $desktop-width) {
+    padding: 6px 0;
+
+    font-size: 20px;
+    line-height: 31px;
+    color: $basic-white;
+  }
+
+  &:not([href]) {
+    @media (min-width: $tablet-width) {
+      border-bottom: 2px solid $basic-green;
+    }
+
+    @media (min-width: $desktop-width) {
+      border-bottom-color: inherit;
+    }
+  }
+
+  &[href]:hover {
+    color: rgba($basic-black, 0.6);
+
+    @media (min-width: $desktop-width) {
+      color: rgba($basic-white, 0.6);
+    }
+  }
+
+  &[href]:active {
+    color: rgba($basic-black, 0.3);
+
+    @media (min-width: $desktop-width) {
+      color: rgba($basic-white, 0.3);
+    }
   }
 }
