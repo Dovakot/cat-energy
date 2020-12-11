@@ -1,9 +1,11 @@
 .page-main--special {
-  padding-top: 30px;
-
-  border-top: 1px solid $basic-light-gray;
+  padding-top: 24px;
 
   @media (min-width: $tablet-width) {
-    border-top: none;
+    padding-top: 64px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 80px;
   }
 }

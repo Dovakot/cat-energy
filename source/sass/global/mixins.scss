@@ -5,6 +5,13 @@
   list-style: none;
 }
 
+@mixin fieldset-unstyled {
+  margin: 0 0 23px;
+  padding: 0;
+
+  border: none;
+}
+
 @mixin text-uppercase(
   $leading: 20px,
   $color: $special-dark-gray
@@ -15,6 +22,10 @@
   font-family: $font-stack;
   color: $color;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+  }
 }
 
 @mixin range-tumbler-toggle(
