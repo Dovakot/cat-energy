@@ -1,5 +1,13 @@
 .catalog {
-  margin-bottom: 30px;
+  margin-bottom: 24px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 65px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 75px;
+  }
 }
 
 .catalog__list {
@@ -24,7 +32,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    grid-column-gap: 80px;
+    grid-gap: 62px 80px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
