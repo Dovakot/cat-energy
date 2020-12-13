@@ -1,6 +1,14 @@
 .page-header {
-  @media (min-width: $desktop-width) {
-    background-image: linear-gradient(to right, $basic-white, $basic-white 50%, $special-dark-green 50%, $special-dark-green 100%);
+  border-bottom: 1px solid $special-light-gray;
+
+  @media (min-width: $tablet-width) {
+    border-bottom: none;
+  }
+
+  &--special {
+    @media (min-width: $desktop-width) {
+      background-image: linear-gradient(to right, $basic-white, $basic-white 50%, $special-dark-green 50%, $special-dark-green 100%);
+    }
   }
 }
 
@@ -26,19 +34,24 @@
 }
 
 .page-header__nav {
-  margin: 15px -20px 0;
+  margin: 0 -20px;
 
   @media (min-width: $tablet-width) {
     margin: 7px 0 0;
   }
 }
 
-.page-header__logo[href] {
-  &:hover {
+.page-header__logo {
+  @media (max-width: $mobile-width) {
+    display: inline-block;
+    margin-bottom: 11px;
+  }
+
+  &[href]:hover {
     opacity: 0.8;
   }
 
-  &:active {
+  &[href]:active {
     opacity: 0.6;
   }
 }

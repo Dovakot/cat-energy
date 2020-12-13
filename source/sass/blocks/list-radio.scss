@@ -2,12 +2,16 @@
   @include list-unstyled;
 
   @media (min-width: $tablet-width) {
-    padding: 25px;
+    padding: 24px 28px 18px;
 
     border: 1px solid $basic-light-gray;
   }
 }
 
 .list-radio__item:not(:last-child) {
-  margin-bottom: 15px;
+  margin-bottom: 9px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 6px;
+  }
 }
