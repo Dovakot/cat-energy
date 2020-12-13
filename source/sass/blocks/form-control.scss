@@ -3,8 +3,16 @@
 }
 
 .form-control__field {
+  &:not(:disabled) + .form-control__label {
+    cursor: pointer;
+  }
+
   &:focus + .form-control__label {
     outline: thin dotted;
+  }
+
+  &:disabled + .form-control__label {
+    opacity: 0.3;
   }
 
   &:checked + .form-control__label::before {
@@ -35,8 +43,6 @@
   display: flex;
   align-items: center;
 
-  cursor: pointer;
-
   &::before {
     content: "";
 
@@ -56,9 +62,5 @@
 
   &:hover::before {
     border-color: darken($basic-gray, 7.5%);
-  }
-
-  &:active {
-    opacity: 0.3;
   }
 }
