@@ -1,6 +1,10 @@
 .product-data {
   font-size: 12px;
   line-height: 16px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+  }
 }
 
 .product-data__group {
@@ -10,8 +14,8 @@
 
   & > * {
     @media (min-width: $tablet-width) {
-      padding-top: 5px;
-      padding-bottom: 5px;
+      padding-top: 7px;
+      padding-bottom: 8px;
 
       border-bottom: 1px solid $basic-gray;
     }
@@ -23,4 +27,8 @@
   padding-left: 10px;
 
   text-align: right;
+
+  &--price {
+    text-transform: uppercase;
+  }
 }

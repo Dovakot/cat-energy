@@ -9,3 +9,11 @@
     padding-top: 80px;
   }
 }
+
+.page-main__title {
+  margin-bottom: 39px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 85px;
+  }
+}
