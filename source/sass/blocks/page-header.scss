@@ -22,14 +22,14 @@
     grid-template-columns: auto 1fr;
     justify-content: space-between;
     align-items: center;
-    padding-top: 27px;
+    padding-top: 24px;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: auto 570px;
     z-index: 30;
 
-    padding-top: 55px;
+    padding-top: 53px;
   }
 }
 
@@ -37,7 +37,7 @@
   margin: 0 -20px;
 
   @media (min-width: $tablet-width) {
-    margin: 7px 0 0;
+    margin: 5px 0 0;
   }
 }
 
@@ -59,7 +59,11 @@
 .page-header__logo-image {
   display: block;
 
+  @media (min-width: $tablet-width) {
+    width: 174px;
+  }
+
   @media (min-width: $desktop-width) {
-    width: 226px;
+    width: 202px;
   }
 }
