@@ -27,10 +27,14 @@
       height: 694px;
 
       background-color: $special-dark-green;
-      background-image: url("../img/bg-sales-pitch-lg.jpg");
+      background-image: url("../img/bg-sales-pitch-desktop.jpg");
       background-repeat: no-repeat;
       background-position: right bottom, left top;
       background-size: 720px auto, 100% auto;
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/bg-sales-pitch-desktop@2x.jpg"), $gradient-green;
+      }
     }
   }
 }
@@ -38,18 +42,21 @@
 .sales-pitch__container {
   position: relative;
 
-  background-image: url("../img/bg-sales-pitch.jpg"),
-    linear-gradient(to right, $gradient-green-start, $gradient-green-start 50%, $gradient-green-end 50%, $gradient-green-end 100%);
+  background-image: url("../img/bg-sales-pitch-mobile.jpg"), $gradient-green;
   background-repeat: no-repeat;
   background-position: center bottom, left top;
   background-size: 320px auto, 100% auto;
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-sales-pitch-mobile@2x.jpg"), $gradient-green;
+  }
 
   @media (min-width: $tablet-width) {
     background-image: none;
   }
 
   @media (min-width: $desktop-width) {
-    min-height: 588px;
+    min-height: 581px;
   }
 
   &::before {
@@ -62,10 +69,14 @@
     width: 280px;
     height: 270px;
 
-    background-image: url("../img/sales-pitch.png");
+    background-image: url("../img/sales-pitch-mobile.png");
     background-repeat: no-repeat;
     background-size: 100% auto;
     transform: translateX(-50%);
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/sales-pitch-mobile@2x.png");
+    }
 
     @media (min-width: $tablet-width) {
       top: auto;
@@ -74,18 +85,29 @@
       left: auto;
       z-index: 10;
 
-      width: 627px;
-      height: 610px;
+      width: 709px;
+      height: 609px;
 
+      background-image: url("../img/sales-pitch-tablet.png");
       transform: translateX(0);
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/sales-pitch-tablet@2x.png");
+      }
     }
 
     @media (min-width: $desktop-width) {
       right: 220px;
-      bottom: 52px;
+      bottom: 54px;
 
-      width: 509px;
-      height: 500px;
+      width: 552px;
+      height: 499px;
+
+      background-image: url("../img/sales-pitch-desktop.png");
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/sales-pitch-desktop@2x.png");
+      }
     }
   }
 }
@@ -103,7 +125,7 @@
 
   @media (min-width: $desktop-width) {
     max-width: 540px;
-    padding: 115px 0 100px 80px;
+    padding: 109px 0 100px 80px;
   }
 }
 

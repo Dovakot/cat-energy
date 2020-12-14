@@ -40,20 +40,23 @@
 .slider__wrapper {
   @media (min-width: $tablet-width) {
     position: absolute;
+    top: -173px;
 
     overflow-x: hidden;
   }
 
+  @media (min-width: $desktop-width) {
+    top: -263px;
+  }
+
   &--before {
     @media (min-width: $tablet-width) {
-      top: -152px;
       left: 16px;
 
-      width: 339px;
+      width: 338px;
     }
 
     @media (min-width: $desktop-width) {
-      top: -243px;
       left: -40px;
 
       width: 365px;
@@ -64,18 +67,16 @@
     display: none;
 
     @media (min-width: $tablet-width) {
-      top: -170px;
-      right: 57px;
+      right: 56px;
 
       display: block;
-      width: 297px;
+      width: 298px;
     }
 
     @media (min-width: $desktop-width) {
-      top: -262px;
-      right: 15px;
+      right: 14px;
 
-      width: 270px;
+      width: 271px;
     }
   }
 }
@@ -84,17 +85,19 @@
   display: block;
 
   @media (min-width: $tablet-width) {
-    width: 670px;
+    width: 677px;
     max-width: none;
   }
 }
 
 .slider__image-after {
   display: block;
+  margin: 0 auto;
 
   @media (min-width: $tablet-width) {
-    width: 543px;
+    width: 545px;
     max-width: none;
+    margin: 0;
   }
 }
 
