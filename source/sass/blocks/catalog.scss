@@ -2,7 +2,7 @@
   margin-bottom: 24px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 65px;
+    margin-bottom: 66px;
   }
 
   @media (min-width: $desktop-width) {
@@ -24,7 +24,7 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 60px;
+    grid-gap: 61px 60px;
     margin-right: 0;
     margin-left: 0;
 
@@ -32,7 +32,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    grid-gap: 62px 80px;
+    grid-gap: 63px 80px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
