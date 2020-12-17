@@ -1,41 +1,75 @@
 .gift {
+  position: relative;
   min-height: 290px;
-  padding: 40px 50px;
+  padding: 187px 50px 20px;
 
   text-align: center;
 
   background-color: $basic-green;
-  background-image: url("../img/icon-gift.svg"), url("../img/bg-gift.jpg");
+  background-image: url("../img/bg-gift-mobile.jpg");
   background-repeat: no-repeat;
-  background-position: center 58px, center;
-  background-size: 78px auto, cover;
+  background-position: center;
+  background-size: cover;
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-gift-mobile@2x.jpg");
+  }
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
+    display: grid;
+    align-items: center;
     min-height: 200px;
-    padding: 72px 105px 50px 180px;
+    padding: 30px 110px 30px 423px;
 
     text-align: left;
 
-    background-position: 78px center, center;
+    background-image: url("../img/bg-gift-tablet.jpg");
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-gift-tablet@2x.jpg");
+    }
   }
 
   @media (min-width: $desktop-width) {
     min-height: 288px;
-    padding: 40px 30px 30px;
+    padding: 185px 30px 20px;
+
+    background-image: url("../img/bg-gift-desktop.jpg");
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-gift-desktop@2x.jpg");
+    }
+  }
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 58px;
+    left: 50%;
+
+    width: 78px;
+    height: 80px;
+
+    background-image: url("../img/icon-gift.svg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    transform: translateX(-50%);
+
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
+      top: 50%;
+      left: 79px;
+
+      transform: translate(0, -50%);
+    }
   }
 }
 
 .gift__slogan {
-  margin-top: 148px;
+  margin-top: 0;
   margin-bottom: 0;
 
   font-size: 16px;
   line-height: 20px;
   color: $basic-white;
-
-  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
-    max-width: 180px;
-    margin-top: 0;
-    margin-left: auto;
-  }
 }
