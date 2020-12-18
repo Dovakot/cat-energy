@@ -14,7 +14,7 @@
 
 @mixin text-uppercase(
   $leading: 20px,
-  $color: $special-dark-gray
+  $color: $special-black
 ) {
   font-weight: 400;
   font-size: 16px;

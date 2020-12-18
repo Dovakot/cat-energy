@@ -12,7 +12,8 @@ $basic-light-gray: #d9d9d9;
 $basic-extra-light-gray: #f2f2f2;
 $basic-green: #68b738;
 
-$special-dark-gray: #222222;
+$special-black: #222222;
+$special-dark-gray: #666666;
 $special-light-gray: #e6e6e6;
 $special-extra-light-gray: #eaeaea;
 $special-green: #5eaa2f;
@@ -26,7 +27,6 @@ $icon-check: url("data:image/svg+xml,%3Csvg width='19' height='15' viewBox='0 0 
 // Градиенты
 $gradient-green: linear-gradient(to right, #65a83e, #65a83e 50%, #62a53b 50%, #62a53b 100%);
 $gradient-gray: linear-gradient(to right, $basic-extra-light-gray, $basic-extra-light-gray 53.1%, $special-extra-light-gray 53.1%, $special-extra-light-gray 100%);
-
 
 // Вьюпорт
 $tablet-width: 768px;
