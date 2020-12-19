@@ -100,6 +100,9 @@
 .form-input__icon-email {
   right: 16px;
 
+  fill: none;
+  stroke: $special-black;
+
   @media (min-width: $tablet-width) {
     right: 18px;
   }
@@ -107,6 +110,8 @@
 
 .form-input__icon-phone {
   right: 13px;
+
+  fill: $basic-black;
 
   @media (min-width: $tablet-width) {
     right: 18px;
