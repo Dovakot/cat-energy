@@ -23,6 +23,8 @@
 }
 
 .copyright__logo {
+  fill: $special-dark-gray;
+
   @media (min-width: $tablet-width) {
     margin-left: 22px;
   }
