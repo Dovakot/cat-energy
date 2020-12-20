@@ -51,13 +51,26 @@
 }
 
 .contacts__map-iframe {
-  display: block;
+  display: none;
   width: 100%;
 
   border: none;
 
   @media (min-width: $tablet-width) {
     height: 400px;
+  }
+
+  &--js {
+    display: block;
+  }
+}
+
+.contacts__map-link {
+  display: flex;
+  justify-content: center;
+
+  img {
+    display: block;
   }
 }
 

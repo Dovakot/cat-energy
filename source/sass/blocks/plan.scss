@@ -211,6 +211,10 @@
     line-height: 30px;
   }
 
+  @media (min-width: $desktop-width) {
+    padding-right: 61px;
+  }
+
   &::before {
     content: "";
     position: absolute;
