@@ -61,6 +61,6 @@
   }
 
   &:hover::before {
-    border-color: darken($basic-gray, 7.5%);
+    border-color: $special-dark-mercury;
   }
 }

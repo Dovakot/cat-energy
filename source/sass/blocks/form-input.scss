@@ -44,7 +44,7 @@
   margin: 0;
   padding: 0 15px;
 
-  border: 1px solid lighten($special-light-gray, 0.5%);
+  border: 1px solid $special-light-mercury;
 
   @media (min-width: $tablet-width) {
     height: 52px;
@@ -66,6 +66,18 @@
     @media (min-width: $tablet-width) {
       height: 174px;
       padding: 14px 18px;
+    }
+  }
+
+  &--invalid {
+    animation: invalid 0.9s;
+
+    & + .form-input__icon-email {
+      animation: invalid-stroke 0.9s;
+    }
+
+    & + .form-input__icon-phone {
+      animation: invalid-fill 0.9s;
     }
   }
 
@@ -95,6 +107,15 @@
       fill: $basic-green;
     }
   }
+
+  &--js:invalid {
+    border-color: $basic-red;
+    box-shadow: 0 0 0 1px $basic-red inset;
+
+    & + .form-input__icon-email {
+      stroke: $basic-red;
+    }
+  }
 }
 
 .form-input__icon-email {
@@ -115,5 +136,27 @@
 
   @media (min-width: $tablet-width) {
     right: 18px;
+  }
+}
+
+@keyframes invalid {
+  0%,
+  100% {
+    border-color: $basic-red;
+    box-shadow: 0 0 0 1px $basic-red inset;
+  }
+}
+
+@keyframes invalid-stroke {
+  0%,
+  100% {
+    stroke: $basic-red;
+  }
+}
+
+@keyframes invalid-fill {
+  0%,
+  100% {
+    fill: $basic-red;
   }
 }
