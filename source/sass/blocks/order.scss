@@ -183,10 +183,9 @@
     width: auto;
     margin-right: 62px;
     margin-bottom: 0;
-    height: 52px;
+    min-height: 52px;
 
     font-size: 20px;
-    line-height: 52px;
   }
 
   @media (min-width: $desktop-width) {
