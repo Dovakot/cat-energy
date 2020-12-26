@@ -88,6 +88,8 @@
   }
 
   &::placeholder {
+    color: inherit;
+
     opacity: 1;
   }
 
@@ -95,15 +97,10 @@
     border-color: $basic-gray;
   }
 
-  &:focus,
-  &:disabled {
+  &:focus {
     border-color: $basic-dark-gray;
     outline: 0;
     box-shadow: 0 0 0 1px $basic-dark-gray inset;
-  }
-
-  &:disabled {
-    background-color: transparent;
 
     & + .form-input__icon-email {
       stroke: $basic-green;
