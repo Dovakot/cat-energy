@@ -31,8 +31,9 @@ const styles = () => {
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(cssmin())
+    .pipe(dest('build/css'))
     .pipe(sourcemap.write('.'))
+    .pipe(cssmin())
     .pipe(rename('style.min.css'))
     .pipe(dest('build/css'))
     .pipe(sync.stream());
