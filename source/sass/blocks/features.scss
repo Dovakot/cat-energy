@@ -1,16 +1,6 @@
-.features {
-  margin-bottom: 42px;
-
-  @media (min-width: $tablet-width) {
-    margin-bottom: 56px;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin-bottom: 79px;
-  }
-}
-
 .features__title {
+  margin-bottom: 38px;
+
   @media (min-width: $tablet-width) {
     margin-bottom: 74px;
   }

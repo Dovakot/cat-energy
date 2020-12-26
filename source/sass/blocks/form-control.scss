@@ -43,9 +43,14 @@
   display: flex;
   align-items: center;
 
+  @media (min-width: $tablet-width) {
+    line-height: 22px;
+  }
+
   &::before {
     content: "";
 
+    flex-shrink: 0;
     width: 30px;
     height: 30px;
     margin-right: 15px;

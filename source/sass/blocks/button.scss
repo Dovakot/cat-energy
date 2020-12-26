@@ -1,12 +1,14 @@
 .button {
-  display: inline-block;
-  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
   margin: 0;
-  padding: 0 25px;
+  padding: 8px 25px;
 
   font-weight: 400;
   font-size: 14px;
-  line-height: 40px;
+  line-height: 22px;
   font-family: $font-stack;
   text-align: center;
   color: $basic-white;
