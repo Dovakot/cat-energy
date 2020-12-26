@@ -1,20 +1,12 @@
-.catalog {
-  margin-bottom: 24px;
-
-  @media (min-width: $tablet-width) {
-    margin-bottom: 66px;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin-bottom: 77px;
+.catalog__container {
+  @media (max-width: $mobile-width) {
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 
 .catalog__list {
   @include list-unstyled;
-
-  margin-right: -20px;
-  margin-left: -20px;
 
   color: $basic-mercury;
 
@@ -25,8 +17,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 61px 60px;
-    margin-right: 0;
-    margin-left: 0;
 
     border: none;
   }
