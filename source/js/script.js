@@ -25,28 +25,28 @@ mapLink.remove();
 // Подбор программы
 const formOrder = document.querySelector('.order__form');
 
-if (formOrder ) {
+if (formOrder) {
   const fieldsList = formOrder.querySelectorAll('.form-input__field[required]');
 
   formOrder.reset();
 
-  for (let fild of fieldsList) {
-    fild.removeAttribute('required');
+  for (let field of fieldsList) {
+    field.removeAttribute('required');
 
-    if (fild.type === 'email') {
-      fild.classList.add('form-input__field--js');
+    if (field.type === 'email') {
+      field.classList.add('form-input__field--js');
     }
   }
 
-  const checkEmptyFields = (filds) => {
-    for (let fild of filds) {
+  const checkEmptyFields = (fields) => {
+    for (let field of fields) {
 
-      if (!fild.value) {
-        fild.classList.remove('form-input__field--invalid');
-        void fild.offsetWidth;
-        fild.classList.add('form-input__field--invalid');
+      if (!field.value) {
+        field.classList.remove('form-input__field--invalid');
+        void field.offsetWidth;
+        field.classList.add('form-input__field--invalid');
 
-        fild.focus();
+        field.focus();
 
         return true;
       }
@@ -57,9 +57,9 @@ if (formOrder ) {
   };
 
   formOrder.addEventListener('submit', (evt) => {
-    const fildEmpty = checkEmptyFields(fieldsList);
+    const fieldEmpty = checkEmptyFields(fieldsList);
 
-    if (fildEmpty) {
+    if (fieldEmpty) {
       evt.preventDefault();
     }
   });
